@@ -5,8 +5,9 @@ const ChatForm = () => {
         <div>
             <form>
                 <textarea>
-                    
+
                 </textarea>
+                <button>send</button>
             </form>
         </div>
     )
