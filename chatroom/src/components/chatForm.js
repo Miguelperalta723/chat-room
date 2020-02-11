@@ -4,9 +4,11 @@ const ChatForm = () => {
     return (
         <div>
             <form>
-                <textarea>
-
-                </textarea>
+                <input 
+                    className="text-input"
+                    type="text"
+                    name="text"
+                />
                 <button>send</button>
             </form>
         </div>
