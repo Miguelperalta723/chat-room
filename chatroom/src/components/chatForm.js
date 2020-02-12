@@ -10,6 +10,7 @@ const ChatForm = () => {
                     name="text"
                 />
                 <button>send</button>
+                <button>delete</button>
             </form>
         </div>
     )
