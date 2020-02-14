@@ -11,6 +11,7 @@ const ChatForm = () => {
                 />
                 <button>send</button>
                 <button>delete</button>
+                <button>change</button>
             </form>
         </div>
     )
