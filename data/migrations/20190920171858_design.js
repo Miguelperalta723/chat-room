@@ -13,13 +13,6 @@ exports.up = function(knex) {
         .string('text', 255)
         .notNullable()
       message
-        .integer('user_id')
-        .unsigned()
-        .references('id')
-        .inTable('users')
-        .onDelete('CASCADE')
-        .onUpdate('CASCADE')
-      message
         .timestamp('created_at', { useTz: true });
     })
   };
