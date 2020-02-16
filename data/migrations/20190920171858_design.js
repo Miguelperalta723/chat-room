@@ -19,6 +19,8 @@ exports.up = function(knex) {
         .inTable('users')
         .onDelete('CASCADE')
         .onUpdate('CASCADE')
+      message
+        .timestamp('created_at', { useTz: true });
     })
   };
   
