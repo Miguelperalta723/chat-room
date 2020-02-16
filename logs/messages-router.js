@@ -16,13 +16,13 @@ router.get('/messages', (req, res) => {
     })
 });
 
-router.post('add-message', (req, res) => {
+router.post('/add', (req, res) => {
     const newMessage = req.body
     console.log(newMessage)
     Logs.insert(newMessage)
     .then(messages => {
         res.status(200).json({
-            response: messages
+            messages
         })
     })
     .catch(err => {
