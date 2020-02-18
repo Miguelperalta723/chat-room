@@ -1,8 +1,9 @@
 const express = require('express');
 const Logs = require('./messages-model')
+const restricted = require('./messages-middleware.js')
 const router = express.Router();
 
-router.get('/messages', (req, res) => {
+router.get('/messages', restricted, (req, res) => {
     Logs.find()
     .then(logs => {
         res.status(200).json({
