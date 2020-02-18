@@ -3,7 +3,7 @@ const Logs = require('./messages-model')
 const restricted = require('./messages-middleware')
 const router = express.Router();
 
-router.get('/messages', restricted, (req, res) => {
+router.get('/messages', (req, res) => {
     Logs.find()
     .then(logs => {
         res.status(200).json({
@@ -17,7 +17,7 @@ router.get('/messages', restricted, (req, res) => {
     })
 });
 
-router.post('/add',restricted, (req, res) => {
+router.post('/add',  (req, res) => {
     const newMessage = req.body
     console.log(newMessage)
     Logs.insert(newMessage)
