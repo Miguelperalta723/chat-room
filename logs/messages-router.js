@@ -1,6 +1,6 @@
 const express = require('express');
 const Logs = require('./messages-model')
-const restricted = require('./messages-middleware')
+const restricted = require('../messages-middleware.js')
 const router = express.Router();
 
 router.get('/messages', (req, res) => {
