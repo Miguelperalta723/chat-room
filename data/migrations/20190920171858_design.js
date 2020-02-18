@@ -4,18 +4,16 @@ exports.up = function(knex) {
       users.increments();  
       users
         .string('email', 255)
-        .notNullable()
       users.string('password', 255)
     })
     .createTable('messages', message => {
       message.increments()
       message
         .string('text', 255)
-        .notNullable()
     })
   };
   
-  exports.down = function(knex, Promise) {
+  exports.down = function(knex) {
     return knex.schema.dropTableIfExists('users')
       .dropTableIfExists('messages')
   };
