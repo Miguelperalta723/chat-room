@@ -13,8 +13,6 @@ exports.up = function(knex) {
       message
         .string('text', 255)
         .notNullable()
-      message
-        .timestamp('created_at', { useTz: true });
     })
   };
   

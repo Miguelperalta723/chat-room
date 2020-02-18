@@ -17,7 +17,7 @@ router.get('/messages', restricted, (req, res) => {
     })
 });
 
-router.post('/add', (req, res) => {
+router.post('/add',restricted, (req, res) => {
     const newMessage = req.body
     console.log(newMessage)
     Logs.insert(newMessage)
