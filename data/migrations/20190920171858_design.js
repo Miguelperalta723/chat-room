@@ -11,7 +11,7 @@ exports.up = function(knex) {
       message
         .string('text', 255)
       message
-        .interger("user_id")
+        .integer("user_id")
         .unsigned()
         .notNullable()
         .references("id")
